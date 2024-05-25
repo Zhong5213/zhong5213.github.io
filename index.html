@@ -1,68 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>底层剪辑手小钟</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your GitHub Pages</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>我的GitHub主页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>底层剪辑手小钟</h1>
-    </header>
-
-    <div class="main-content">
-        <div class="readme-content">
-            <你好，欢迎来到小钟的个人网页（虽然这个网页没啥卵用就是了)
-                日常更新的视频会不定期塞在里面，每次发B站和小世界画质压缩的太厉害了不如直接塞在GitHub里
-                平时出的成片也会放在里面，展示在网站的照片都是可以转载使用的，标明出处
-                祝你玩得开心啦😘 >
-            <p>This is my GitHub Pages.</p>
-        </div>
-
-        <div class="video-section">
-            <!-- 视频区域 -->
-        </div>
-    </div>
-
-</body>
-</html>
-
-    <body>
-
-    <header>
-        <div class="header-content">
-            <h1>底层剪辑手小钟</h1>
-        </div>
-    </header>
-
-    <div class="main-content">
-        <div class="photo-gallery">
-            <!-- 这里是照片栏，后期可以插入你的照片 -->
-            <img src="photo/DSC00021.jpg" alt="DSC00021">>
-        </div>
-
-       <!-- 视频区域示例 -->
-<div class="video-section">
-    <div class="video-item">
-        <a href="https://www.bilibili.com/video/BV1mx4y1C72s/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=16b5d0f5f1b7473903e3fb72c68e5351>
-            <img class="video-thumbnail" src="content="//i0.hdslb.com/bfs/archive/f41d82da2bc60ad7927b953203e93120178b2303.jpg@100w_100h_1c.png"" alt="Video Thumbnail">
-        </a>
-    </div>
-    <!-- 添加更多视频项 -->
-</div>
-
+    <div class="container">
+        <header>
+            <h1>欢迎来到我的主页</h1>
+        </header>
+        <div class="main-content">
+            <div class="photo-wall">
+                <div class="slider">
+                    <img src="photo1.jpg" alt="照片1">
+                    <img src="photo2.jpg" alt="照片2">
+                    <img src="photo3.jpg" alt="照片3">
+                    <!-- 添加更多照片 -->
+                </div>
+            </div>
+            <div class="links">
+                <div class="link-item">
+                    <a href="https://space.bilibili.com/357909710">
+                        <img src="bilibili-icon.png" alt="Bilibili">
+                        <p>我的Bilibili</p>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.zhihu.com/people/xiao-zhong-72-86">
+                        <img src="zhihu-icon.png" alt="知乎">
+                        <p>我的知乎</p>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.youtube.com/channel/UCQyTjkE0XSvDz3t8LoUqXaw">
+                        <img src="youtube-icon.png" alt="YouTube">
+                        <p>我的YouTube</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider img');
+        const totalImages = images.length;
 
+        setInterval(() => {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.display = 'block';
+        }, 3000);
+    </script>
 </body>
 </html>
